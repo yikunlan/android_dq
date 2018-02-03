@@ -5,29 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
-     <!--开机屏 -->
-    <!--<ImageView-->
-        <!--android:id="@+id/myimg"-->
-        <!--android:scaleType="fitXY"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:src="@drawable/loading00001"/>-->
-
-
-     <!--清除间距 -->
-    <!--<android.gesture.GestureOverlayView-->
-        <!--android:id="@+id/myGestures1"-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="0dip"-->
-        <!--android:layout_weight="1.0"-->
-        <!--android:fadeOffset="10000"-->
-        <!--android:gestureStrokeType="multiple"/>-->
-
-
-
-
         <com.modo.core.widgets.MyProgressBar
             android:id="@+id/myprogressbar"
             android:layout_width="match_parent"
