@@ -79,32 +79,6 @@ public class X5WebviewActivity extends BasicActivity {
         }
 
 
-        ///登录随便写的
-       /* findViewById(R.id.auth_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //授权QQ登录
-                UMShareAPI.get(X5WebviewActivity.this).doOauthVerify(X5WebviewActivity.this, SHARE_MEDIA.QQ, authListener);
-                //授权微信登录
-                //UMShareAPI.get(X5WebviewActivity.this).doOauthVerify(X5WebviewActivity.this, SHARE_MEDIA.WEIXIN, authListener);
-
-                //Toast.makeText(X5WebviewActivity.this,PhoneInfo.getIMEI(X5WebviewActivity.this),Toast.LENGTH_LONG).show();
-                //Toast.makeText(X5WebviewActivity.this,PhoneInfo.getAndroidId(X5WebviewActivity.this),Toast.LENGTH_LONG).show();
-            }
-        });*/
-        /*
-        findViewById(R.id.request_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               *//* BaseHttp.getOkHttpClient(X5WebviewActivity.this);
-                BaseHttp.request();
-                try {
-                    BaseHttp.okhttpPostRequest(X5WebviewActivity.this);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }*//*
-            }
-        });*/
 
         Log.e("TAG",mWebView.toString());
 
