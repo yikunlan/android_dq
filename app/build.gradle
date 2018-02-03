@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '26.0.2'
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        applicationId "com.modo.dq"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 7
+        versionName "7.0"
+        testInstrumentationRunner "android.support.applayout.runner.AndroidJUnitRunner"
+        /*multiDexEnabled true*/
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('daqingkey.jks')
+            storePassword "daqing123"
+            keyAlias "daqing"
+            keyPassword "daqing123"
+        }
+        release {
+            storeFile file('daqingkey.jks')
+            storePassword "daqing123"
+            keyAlias "daqing"
+            keyPassword "daqing123"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'ren.yale.android:cachewebviewlib:1.2.7'
+    testCompile 'junit:junit:4.12'
+    //OKHTTP和retrofit
+    compile('org.ligboy.retrofit2:converter-fastjson-android:2.2.0') {
+        exclude module: 'fastjson'
+    }
+    //这个是retrofit对fastjson的支持，可用fastjson的方式来解析json数据
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+    /*compile 'zlc.season:rxdownload:1.1.1'*/
+    implementation files('libs/alipaySdk-20170922.jar')
+    implementation project(':core_library')
+}

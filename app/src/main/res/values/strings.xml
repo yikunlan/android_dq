@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">皇上吉祥</string>
+    <!--<string name="app_name">奇迹超级威力版</string>-->
+    <!--<string name="app_name">卓越之翼</string>-->
+    <string name="action_settings">Settings</string>
+    <string name="drawable">Settings</string>
+</resources>

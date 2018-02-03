@@ -1,0 +1,23 @@
+{
+  "version" : "10",      // 版本号，整数
+  "desc" : "战盟副本、坐骑相关",              // 版本描述，50汉字以内
+  "totalSize" : "256.21",   // zip包总共大小，单位MB
+  "zips" : [                // zip包详细信息
+    {
+      "url": "https://mu.modo.cn/battle.zip", // zip包的下载地址
+      "desc" : "战斗资源",                      // zip包的描述，建议10汉字以内
+      "size" : "12"                           // zip包大小，单位MB
+    },
+    {
+      "url" : "https://mu.modo.cn/UI.zip",
+      "desc" : "UI资源",
+      "size" : "12"
+    },
+    {
+      "url" : "https://mu.modo.cn/xxx.zip",
+      "desc" : "xxxz资源",
+      "size" : "12"
+    }
+  ]
+
+}
